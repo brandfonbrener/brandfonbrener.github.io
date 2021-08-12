@@ -26,14 +26,20 @@
 <br> 
 <!-- line break -->
 
-<div id="demo"></div>
+<div id="loop"></div>
 
 <script>
+int pages = 10
 var x ="", i;
-for (i=1; i<=6; i++) {
-  x = x + "<h" + i + ">Heading " + i + "</h" + i + ">";
+for (i=1; i<=pages; i++) {
+  if (i<10){
+    x = x + "<img src=\"PAGES\\page0" + i + ".jpg\" alt=\"Page " + i + "\" class=\"responsive\"><br>";
+  }
+  else{
+    x = x + "<img src=\"PAGES\\page" + i + ".jpg\" alt=\"Page " + i + "\" class=\"responsive\"><br>";
+  }
 }
-document.getElementById("demo").innerHTML = x;
+document.getElementById("loop").innerHTML = x;
 </script>
 
 <img src="PAGES\page01.jpg" alt="Page One" class="responsive">
